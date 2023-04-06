@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+  }
+
+.container {
+    height: 100vh;
+}
+
+.test {
+    height: 70vh;
+}
+
+.bg-peach {
+    background-color: floralwhite;
+}
