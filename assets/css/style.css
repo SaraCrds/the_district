@@ -2,12 +2,12 @@ html, body {
     height: 100%;
   }
 
-.container {
-    height: 100vh;
+.body-bg {
+    min-height: 100vh;
 }
 
 .test {
-    height: 70vh;
+    min-height: 70vh;
 }
 
 .bg-peach {
