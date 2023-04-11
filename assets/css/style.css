@@ -5,11 +5,3 @@ html, body {
 .body-bg {
     min-height: 100vh;
 }
-
-.test {
-    min-height: 70vh;
-}
-
-.bg-peach {
-    background-color: floralwhite;
-}
