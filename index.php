@@ -62,13 +62,13 @@
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active img-carou">
-                <img src="assets/img/bg1.jpeg" class="d-block w-100" alt="...">
+                <img src="assets/img/bg1.jpeg" class="d-block" alt="...">
               </div>
               <div class="carousel-item img-carou">
-                <img src="assets/img/bg2.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/bg2.jpg" class="d-block" alt="...">
               </div>
               <div class="carousel-item img-carou">
-                <img src="assets/img/bg3.png" class="d-block w-100" alt="...">
+                <img src="assets/img/bg3.png" class="d-block" alt="...">
               </div>
               <div class="carousel-caption d-flex flex-column justify-content-center h-100 p-0">
                   <h1>The District</h1>

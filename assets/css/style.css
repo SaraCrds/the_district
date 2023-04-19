@@ -59,5 +59,6 @@ h3 {
 
 .img-carou img  {
   min-height: 94vh;
+  min-width: 100%;
   filter: brightness(50%);
 }
