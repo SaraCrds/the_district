@@ -23,16 +23,29 @@ html, body {
   color: rgb(255, 166, 0)!important;
 }
 
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 576px){
+  .dropdown:hover > .dropdown-menu {
+    display:block;
+    margin-top: 0;
+  }
+}
+
+/* PAGE ACCUEIL */
+
 h1 {
-  font-size: 10em;
+  font-size: 11vw;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
 }
 
 .slogan {
-  font-size: 4em;
+  font-size: 5vw;
   font-family: 'Kaushan Script', cursive;
-  margin-top: -40px;
+  margin-top: -2vw;
 }
 
 h2 {
@@ -46,19 +59,77 @@ h3 {
   font-family: 'Kaushan Script', cursive;
 }
 
-@media (min-width: 576px){
-  .dropdown:hover > .dropdown-menu {
-    display:block;
-    margin-top: 0;
-  }
-}
+
+/* CAROUSEL CSS */
 
 .img-carou {
-  height: 94vh;
+  height: 100vh;
 }
 
 .img-carou img  {
-  min-height: 94vh;
+  min-height: 100vh;
   min-width: 100%;
   filter: brightness(50%);
+}
+
+/* PLAT CSS */
+
+.plat-bg {
+  background-image: url('../../assets/img/background.jpg');
+  background-size: 100vw;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* CATEGORIE CSS */
+
+.cate img {
+  border-radius: 50%;
+  max-width: 75%;
+}
+
+.cate h4 {
+  font-size: 2vw;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* OLD */
+
+.cat img {
+  filter: brightness(70%);
+  object-fit: cover;
+  height: 15vh;
+}
+
+/* BREAKPOINT */
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 20vw;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    line-height: 20vw;
+  }
+  
+  .slogan {
+    font-size: 10vw;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: -2vw;
+    line-height: 10vw;
+  }
+
+  .cate h4 {
+    font-size: 5vw;
+  }
+  
+
+  h4 {
+    font-size: 12vw;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    line-height: 10vw;
+  }
+  
 }
