@@ -117,49 +117,94 @@
               </div>
             </div>
             <div class="row justify-content-center w-100 m-0">
-            <div class="col-3 col-md cat p-0">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-                <div class="bg-primary py-3">
-                  <p class="text-white m-0 text-center">
-                    Nom Plat
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
                   </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
                 </div>
             </div>
             <!-- DELETE LATER WHEN PHP DONE -->
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
-            <div class="col-3 col-md cat p-0">
-              <a class="p-0 text-white" href="">
+            <div class="col-3 col-md plat p-0">
                 <img src="assets/img/menu-burger.jpg" class="d-block w-100" alt="...">
-              </a>
+                <div class="bg-primary py-3 text-center">
+                  <p class="text-white m-0">
+                    Nom Plat 123456
+                  </p>
+                  <a class="p-0 text-white" href="">
+                    <br>Commander
+                  </a>
+                </div>
             </div>
             <!-- END DELETE LATER -->
         </div>
