@@ -9,7 +9,7 @@ public $db;
 public function __construct(\PDO $pdo, $id=0, $nom="", $image="") {
 $this->db = $pdo;
 $this->id = $id;
-$this->libelle = $nom;
+$this->nom = $nom;
 $this->image = $image;
 }
 

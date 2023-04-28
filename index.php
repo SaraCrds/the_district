@@ -4,7 +4,7 @@ include 'header.php';
 include 'dao.php';
 
 $nomcat = NomCatIndex();
-var_dumb ($nomcat);
+var_dump ($nomcat);
 // include 'assets/php/Categorie.php';
 
 // $db= ConnectDB();
