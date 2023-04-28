@@ -104,6 +104,13 @@ h3 {
   height: 15vh;
 }
 
+.plat p {
+  font-size: 1.2vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* BREAKPOINT */
 
 @media (max-width: 767px) {
