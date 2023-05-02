@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body class="body-bg bg-black m-0 p-0">
+<header>
     <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar fixed-top bg-black px-5" data-bs-theme="dark">
   <div class="container-fluid">
@@ -24,35 +25,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item text-primary align-content-center py-2">
         ✦
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Catégorie
-          </a>
-          <ul class="dropdown-menu bg-black">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item text-primary align-content-center py-2">
-        ✦
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Plats
-          </a>
-          <ul class="dropdown-menu bg-black">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="categorie.php">Notre Carte</a>
         </li>
         <li class="nav-item text-primary align-content-center py-2">
         ✦
@@ -60,7 +39,14 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Contact</a>
         </li>
+        <li class="nav-item text-primary align-content-center py-2">
+        ✦
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#"><i class="fa-regular fa-user"></i> Se Connecter</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+</header>
