@@ -40,13 +40,33 @@ function NomCatTitle()
     $requete->closeCursor();
 }
 
-function CatDisplay() {
+function CatGetId() {
+    if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    }
+    else{
+    $id = Null; }
+    return $id;
+}
+
+function CatDisplaySpe($id) {
     $db= ConnectDB();
-    $id = $_GET["id"];
-    $requete = $db->prepare("SELECT libelle, image FROM categorie JOIN plat ON plat.id_categorie = categorie.id WHERE categorie.id=? AND categorie.active = 'Yes';");
+    $requete = $db->prepare("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
+    WHERE categorie.id=? AND categorie.active = 'Yes' AND plat.active='Yes' 
+    ORDER BY plat.id ASC");
     $requete->execute(array($id));
-    return $requete->fetch(PDO::FETCH_OBJ);
+    return $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 }
+
+function CatDisplayAll() {
+    $db= ConnectDB();
+    $requete = $db->query("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
+    WHERE categorie.active = 'Yes' AND plat.active='Yes' 
+    ORDER BY categorie.id ASC, plat.id ASC");
+    return $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+}
+
 
 ?>
