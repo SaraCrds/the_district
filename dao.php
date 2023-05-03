@@ -63,7 +63,8 @@ function CatDisplayAll() {
     $db= ConnectDB();
     $requete = $db->query("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
     WHERE categorie.active = 'Yes' AND plat.active='Yes' 
-    ORDER BY categorie.id ASC, plat.id ASC");
+    ORDER BY categorie.id ASC, plat.id ASC
+    LIMIT 6");
     return $requete->fetchAll(PDO::FETCH_OBJ);
     $requete->closeCursor();
 }

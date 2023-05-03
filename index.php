@@ -42,7 +42,7 @@ $nomplat = NomPlatIndex();
     <!-- FOR EACH -->
     <?php foreach ($nomcat as $cat): ?>
       <div class="col-6 col-md-2 p-0 justify-content-center">
-          <a class="p-0 text-white" href="">
+          <a class="p-0 text-white" href="categorie.php?id=<?= $cat->id ?>">
             <img src="assets/img/category/<?= $cat->image ?>" class="d-block w-100 mx-auto" alt="...">
             <div class="pt-2 text-center text-break">
               <h4 class="text-white"><?= $cat->libelle ?></h4>
