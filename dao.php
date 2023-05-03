@@ -51,7 +51,7 @@ function CatGetId() {
 
 function CatDisplaySpe($id) {
     $db= ConnectDB();
-    $requete = $db->prepare("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
+    $requete = $db->prepare("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle, plat.id FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
     WHERE categorie.id=? AND categorie.active = 'Yes' AND plat.active='Yes' 
     ORDER BY plat.id ASC");
     $requete->execute(array($id));
@@ -61,7 +61,7 @@ function CatDisplaySpe($id) {
 
 function CatDisplayAll() {
     $db= ConnectDB();
-    $requete = $db->query("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
+    $requete = $db->query("SELECT plat.libelle AS plat_libelle, plat.image, categorie.libelle, plat.id FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
     WHERE categorie.active = 'Yes' AND plat.active='Yes' 
     ORDER BY categorie.id ASC, plat.id ASC
     LIMIT 6");

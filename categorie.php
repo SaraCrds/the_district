@@ -33,10 +33,15 @@ else {
 <div class="bg-cat-page d-flex justify-content-center">
 <div class="row col-md-8 col-12 pt-5 pb-3 d-flex justify-content-center">
 <?php foreach ($catPlat as $catPlat ): ?>
-<div class="image col-md-3 col-10 p-0 mx-2 mb-4">
-<img src="assets/img/food/<?= $catPlat->image ?>" alt="background">
-<div class="text text-white pt-2 px-3"><p class="catplat_title mb-0"><?= $catPlat->libelle ?></p><p class="mb-0"><?= $catPlat->plat_libelle ?></p></div>
-</div>
+    <div class="image col-md-3 col-10 p-0 mx-2 mb-4">
+        <a href="plat.php?id=<?= $catPlat->id ?>">
+            <img src="assets/img/food/<?= $catPlat->image ?>" alt="background">
+            <div class="text text-white pt-2 px-3">
+                <p class="catplat_title mb-0"><?= $catPlat->libelle ?></p>
+                <p class="mb-0"><?= $catPlat->plat_libelle ?></p>
+            </div>
+        </a>
+    </div>
 <?php endforeach; ?>
 </div>
 </div>
