@@ -221,16 +221,35 @@ h3 {
 
 /* PLAT SPE PAGE */
 
-.bg-cat-page {
+.bg-plat-page {
   background-image: url('../../assets/img/background.jpg');
   background-size: 100vw;
   background-position: center;
   background-attachment: fixed;
+  padding-top: 8em;
+  padding-bottom: 5em;
+}
+
+.bg-plat-page .row {
+  -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,1); 
+  box-shadow: 0px 0px 30px 5px rgba(0,0,0,1);
 }
 
 .platspe img {
   object-fit: cover;
-  height: 15vh;
+  max-height: 50vh;
+}
+
+.platspe_lib {
+  font-size: 4.5vh;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.prix {
+  font-size: 3.2vh;
+  font-family: 'Oswald', sans-serif;
 }
 
 /* BREAKPOINT */
