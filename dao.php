@@ -152,4 +152,12 @@ function CatDisplayAll() {
         return $arr;
     }
 
+    function AdminCatSel() {
+        $db= ConnectDB();
+        $requete = $db->query("SELECT DISTINCT libelle, id FROM categorie ORDER BY id  ASC");
+        $arr = $requete->fetchAll(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $arr;
+    }
+
 ?>

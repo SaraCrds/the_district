@@ -2,6 +2,7 @@
 $id = PlatGetId();
 $DisPlatSpe = AdminPlatSpe($id);
 $active = AdminActive();
+$categorie = AdminCatSel();
 
 ?>
 
@@ -34,6 +35,31 @@ $active = AdminActive();
                           <?php } endforeach; ?>
                         </select>
                     </div>
+                </div>
+                </div>
+                <div class="row no-gutters align-items-center">
+                    <div class="col-md-6 col-12">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Prix:</label>
+                        <input type="text" name="title" class="form-control" id="title" value="<?= $DisPlatSpe->prix ?>">
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="mb-3">
+                        <label for="artist" class="form-label">Categorie:</label>
+                        <select class="form-select" name="artist" id="artist">
+                          <?php foreach ($categorie as $categorie): 
+                            if ($DisPlatSpe->categorie_id == $categorie->id){?>
+                            <option selected value="<?= $categorie->id ?>"><?= $categorie->libelle ?></option>
+                            <?php } else {?>
+                            <option value="<?= $categorie->id ?>"><?= $categorie->libelle ?></option>
+                          <?php } endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $DisPlatSpe->description ?></textarea>
                 </div>
                 </div>
                     <div class="mb-3">
