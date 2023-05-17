@@ -31,6 +31,9 @@
 
     <div class="border-top pt-4 text-center">
       <p>© 2022 Company, Inc. All rights reserved.</p>
+      <?php if (isset($_SESSION['login'])){ ?>
+      <p><a href="admin.php">Panneau administrateur</a></p>
+      <?php }?>
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/21333c98b9.js" crossorigin="anonymous"></script>

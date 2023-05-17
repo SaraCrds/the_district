@@ -99,5 +99,57 @@ function CatDisplayAll() {
 
     //// END FUNCTION FOR PLAT
 
+    //// BEGIN ADMIN FUNCTION
+
+    function AdminCat()
+{
+    $db= ConnectDB();
+    $requete = $db->query("SELECT libelle, image, id, active FROM categorie ORDER BY id  ASC");
+    $arr = $requete->fetchAll(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+    return $arr;
+}
+
+    function AdminCatSpe($id)
+    {
+        $db= ConnectDB();
+        $requete = $db->prepare("SELECT libelle, image, id, active FROM categorie WHERE id=:id");
+        $requete-> bindValue(":id", $id, PDO::PARAM_INT);
+        $requete->execute();
+        $arr = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $arr;
+    }
+
+    function AdminPlat($id){
+        $db= ConnectDB();
+        $requete = $db->prepare("SELECT plat.libelle AS plat_libelle, plat.image AS plat_image, plat.id AS plat_id
+        , plat.active AS plat_active, plat.prix AS plat_prix, plat.description AS plat_description FROM categorie JOIN plat ON plat.id_categorie = categorie.id 
+        WHERE categorie.id=:id ORDER BY plat.id ASC");
+        $requete-> bindValue(":id", $id, PDO::PARAM_INT);
+        $requete->execute();
+        $arr = $requete->fetchAll(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $arr;
+    }
+
+    function AdminActive() {
+        $db= ConnectDB();
+        $requete = $db->query("SELECT DISTINCT active FROM categorie ORDER BY id  ASC");
+        $arr = $requete->fetchAll(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $arr;
+    }
+
+    function AdminPlatSpe($id)
+    {
+        $db= ConnectDB();
+        $requete = $db->prepare("SELECT libelle, description, prix, image, id, active, id_categorie FROM plat WHERE id=:id");
+        $requete-> bindValue(":id", $id, PDO::PARAM_INT);
+        $requete->execute();
+        $arr = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $arr;
+    }
 
 ?>

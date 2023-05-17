@@ -252,6 +252,15 @@ h3 {
   font-family: 'Oswald', sans-serif;
 }
 
+.btn-primary {
+  background-color: rgb(255, 166, 0);
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: rgb(209, 102, 2)!important;
+}
+
 /* BREAKPOINT */
 
 @media (max-width: 767px) {
