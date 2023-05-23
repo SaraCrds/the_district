@@ -15,18 +15,18 @@ $categorie = AdminCatSel();
             <img src="assets/img/food/<?= $DisPlatSpe->image ?>" class="w-50">
         </div>
         <div class="col-md-6 p-0 bg-black py-3 px-4">
-            <form class="px-5 pt-4 h-50 text-white pb-5" action ="script_plat_modify.php" method="post" enctype="multipart/form-data">
+            <form class="px-5 pt-4 h-50 text-white pb-5" action ="script_modify_plat.php" method="post" enctype="multipart/form-data">
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Libelle:</label>
-                        <input type="text" name="title" class="form-control" id="title" value="<?= $DisPlatSpe->libelle ?>">
+                        <label for="libelle" class="form-label">Libelle:</label>
+                        <input type="text" name="libelle" class="form-control" id="libelle" value="<?= $DisPlatSpe->libelle ?>">
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="mb-3">
-                        <label for="artist" class="form-label">Active:</label>
-                        <select class="form-select" name="artist" id="artist">
+                        <label for="active" class="form-label">Active:</label>
+                        <select class="form-select" name="active" id="active">
                           <?php foreach ($active as $active): 
                             if ($DisPlatSpe->active == $active->active){?>
                             <option selected value="<?= $active->active ?>"><?= $active->active ?></option>
@@ -40,14 +40,14 @@ $categorie = AdminCatSel();
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Prix:</label>
-                        <input type="text" name="title" class="form-control" id="title" value="<?= $DisPlatSpe->prix ?>">
+                        <label for="prix" class="form-label">Prix:</label>
+                        <input type="text" name="prix" class="form-control" id="prix" value="<?= $DisPlatSpe->prix ?>">
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="mb-3">
                         <label for="artist" class="form-label">Categorie:</label>
-                        <select class="form-select" name="artist" id="artist">
+                        <select class="form-select" name="categorie" id="categorie">
                           <?php foreach ($categorie as $categorie): 
                             if ($DisPlatSpe->categorie_id == $categorie->id){?>
                             <option selected value="<?= $categorie->id ?>"><?= $categorie->libelle ?></option>
@@ -58,8 +58,8 @@ $categorie = AdminCatSel();
                     </div>
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"><?= $DisPlatSpe->description ?></textarea>
+                  <label for="desc" class="form-label">Description</label>
+                  <textarea class="form-control" id="desc" name="desc" rows="3"><?= $DisPlatSpe->description ?></textarea>
                 </div>
                 </div>
                     <div class="mb-3">

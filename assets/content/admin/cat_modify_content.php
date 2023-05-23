@@ -15,18 +15,18 @@ $active = AdminActive();
             <img src="assets/img/category/<?= $DisCatSpe->image ?>" class="w-50">
         </div>
         <div class="col-md-6 p-0 bg-black py-3 px-4">
-            <form class="px-5 pt-4 h-50 text-white pb-5" action ="script_cat_modify.php" method="post" enctype="multipart/form-data">
+            <form class="px-5 pt-4 h-50 text-white pb-5" action ="script_modify_category.php" method="post" enctype="multipart/form-data">
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
                     <div class="mb-3">
-                        <label for="title" class="form-label">Libelle:</label>
-                        <input type="text" name="title" class="form-control" id="title" value="<?= $DisCatSpe->libelle ?>">
+                        <label for="libelle" class="form-label">Libelle:</label>
+                        <input type="text" name="libelle" class="form-control" id="libelle" value="<?= $DisCatSpe->libelle ?>">
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="mb-3">
                         <label for="artist" class="form-label">Active:</label>
-                        <select class="form-select" name="artist" id="artist">
+                        <select class="form-select" name="active" id="active">
                           <?php foreach ($active as $active): 
                             if ($DisCatSpe->active == $active->active){?>
                             <option selected value="<?= $active->active ?>"><?= $active->active ?></option>
@@ -59,7 +59,7 @@ $active = AdminActive();
         <div class="col-md-6 platspe p-0 bg-black py-3 px-4">
             <p class="platspe_lib text-white mb-3"><?= $DisPlat->plat_libelle ?></p>
             <a class="text-white" href="plat_modify.php?id=<?= $DisPlat->plat_id ?>"><span class="material-symbols-outlined">settings</span></a>
-            <a class="text-white" href="script_plat_delete.php?id=<?= $DisPlat->plat_id ?>" onclick="return confirm('hh')"><span class="material-symbols-outlined">delete</span></a>
+            <a class="text-white" href="script_delete_plat.php?id=<?= $DisPlat->plat_id ?>" onclick="return confirm('Voulez-vous supprimer ce plat? /n Ce n`est pas réversible')"><span class="material-symbols-outlined">delete</span></a>
         </div>
     </div>
     <?php endforeach ?>

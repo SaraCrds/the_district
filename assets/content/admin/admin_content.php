@@ -21,7 +21,7 @@ $DisCat = AdminCat();
             <p class="platspe_lib text-white mb-3"><?= $DisCat->libelle ?></p>
             <p class="platdesc text-white mb-4">Active? <?= $DisCat->active ?></p>
             <a class="text-white" href="cat_modify.php?id=<?= $DisCat->id ?>"><span class="material-symbols-outlined">settings</span></a>
-            <a class="text-white" href="script_cat_delete.php?id=<?= $DisCat->id ?>" onclick="return confirm('hh')"><span class="material-symbols-outlined">delete</span></a>
+            <a class="text-white" href="script_delete_category.php?id=<?= $DisCat->id ?>" onclick="return confirm('Voulez-vous supprimer cette categorie? /n Ce n`est pas réversible')"><span class="material-symbols-outlined">delete</span></a>
             </div>
         </div>
     </div>
