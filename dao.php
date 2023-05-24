@@ -99,6 +99,37 @@ function CatDisplayAll() {
 
     //// END FUNCTION FOR PLAT
 
+    //// BEGIN CART FUNCTION
+
+    function createCart(){
+        if (!isset($_SESSION['shop'])){
+           $_SESSION['shop']=array();
+           $_SESSION['shop']['idplat'] = array();
+           $_SESSION['shop']['qte'] = array();
+           $_SESSION['shop']['prix'] = array();
+        }
+        return true;
+     }
+
+     function addPlat($idplat,$qte,$prix){
+        if (createCart())
+        {
+           $plat = array_search($idplat,  $_SESSION['shop']['idplat']);
+           if ($plat != false)
+           {
+              $_SESSION['shop']['qte'][$plat] += $qte ;
+           }
+           else
+           {
+              array_push( $_SESSION['shop']['idplat'],$idplat);
+              array_push( $_SESSION['shop']['qte'],$qte);
+              array_push( $_SESSION['shop']['prix'],$prix);
+           }
+        }
+        else
+        echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+     }
+
     //// BEGIN ADMIN FUNCTION
 
     function AdminCat()
