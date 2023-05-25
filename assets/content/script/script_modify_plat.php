@@ -29,11 +29,10 @@ require "../../../dao.php";
 
     // renvoie vers le formulaire si pas bien rempli
     if ($libelle == Null || $active == Null || $desc == Null || $prix == Null || $idcat == Null) {
-        header("Location: plat_modify.php?id=" . $id);
+        header("Location: ../../../plat_modify.php?id=" . $id);
         exit;
     }
 
-    require "../../../db.php"; 
     $db = ConnectDB();
 
     if ($image == Null) {
@@ -82,7 +81,7 @@ require "../../../dao.php";
     }
 
     // Si OK: redirection vers la page artist_detail.php
-    header("Location: plat_modify.php?id=" . $id);
+    header("Location: ../../../plat_modify.php?id=" . $id);
     exit;
 
     ?>

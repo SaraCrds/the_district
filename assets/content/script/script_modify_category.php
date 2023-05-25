@@ -26,16 +26,15 @@ require "../../../dao.php";
 
     // renvoie vers le formulaire si pas bien rempli
     if ($libelle == Null || $active == Null) {
-        header("Location: cat_modify.php?id=" . $id);
+        header("Location: ../../../cat_modify.php?id=" . $id);
         exit;
     }
 
-    require "../../../db.php"; 
     $db = ConnectDB();
 
     if ($picture == Null) {
         try {
-            $requete = $db->prepare("UPDATE category SET libelle = :libelle, active = :active WHERE id = :id;"); 
+            $requete = $db->prepare("UPDATE categorie SET libelle = :libelle, active = :active WHERE id = :id;"); 
             $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
             $requete->bindValue(":active", $active, PDO::PARAM_STR);
             $requete->bindValue(":id", $id, PDO::PARAM_INT);
@@ -53,7 +52,7 @@ require "../../../dao.php";
 
     else {
         try {
-            $requete = $db->prepare("UPDATE category SET libelle = :libelle, image = :picture, active = :active WHERE id = :id;"); 
+            $requete = $db->prepare("UPDATE categorie SET libelle = :libelle, image = :picture, active = :active WHERE id = :id;"); 
             $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
             $requete->bindValue(":image", $picture, PDO::PARAM_STR);
             $requete->bindValue(":active", $active, PDO::PARAM_STR);
@@ -71,7 +70,7 @@ require "../../../dao.php";
     }
 
     // Si OK: redirection vers la page artist_detail.php
-    header("Location: cat_modify.php?id=" . $id);
+    header("Location: ../../../cat_modify.php?id=" . $id);
     exit;
 
     ?>

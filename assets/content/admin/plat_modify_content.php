@@ -15,7 +15,7 @@ $categorie = AdminCatSel();
             <img src="assets/img/food/<?= $DisPlatSpe->image ?>" class="w-50">
         </div>
         <div class="col-md-6 p-0 bg-black py-3 px-4">
-            <form class="px-5 pt-4 h-50 text-white pb-5" action ="script_modify_plat.php" method="post" enctype="multipart/form-data">
+            <form class="px-5 pt-4 h-50 text-white pb-5" action ="assets/content/script/script_modify_plat.php" method="post" enctype="multipart/form-data">
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
                     <div class="mb-3">

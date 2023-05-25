@@ -42,28 +42,3 @@ header("Location: ../../../index.php");
 // Fermeture du script
 exit;
 ?>
-
-<!-- $requete = $db->prepare("SELECT password FROM utilisateur WHERE email=? LIMIT 1;");
-$requete-> execute(array($mail));
-$requete->execute();
-$arr = $requete->fetchAll(PDO::FETCH_OBJ);
-$requete->closeCursor();
-
-if(count($arr)>0 && $arr!=Null ){
-    if(!password_verify($pssword, $arr[0])){
-        $_SESSION["login"];
-        echo "erreur2";
-        exit();
-    }
-    else {
-        echo "erreur3";
-        exit();
-    }
-}
-
-else {
-    header("Location: ../../../login.php");
-    exit();
-}
-
-    ?> -->
