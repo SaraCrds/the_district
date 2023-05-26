@@ -22,6 +22,13 @@ require "../../../dao.php";
     $etat = "En préparation";
     $date =  date("Y-m-d H:i:s");
 
+    $messagemail= "Votre commande du " . $date . " a bien été envoyé.";
+    $aHeaders = array('MIME-Version' => '1.0',
+    'Content-Type' => 'text/html; charset=utf-8',
+    'From' => 'The District <contact@thedistric.com>',
+    'X-Mailer' => 'PHP/' . phpversion()
+    );
+
     // 
     $db = ConnectDB();
 
@@ -47,6 +54,8 @@ try {
 
     // Libération de la requête (utile pour lancer d'autres requêtes par la suite) :
     $requete->closeCursor();
+
+    mail($mail, "Votre commande a été envoyé", $messagemail, $aHeaders);
 }
 
 // Gestion des erreurs
