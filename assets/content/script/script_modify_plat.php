@@ -33,51 +33,12 @@ require "../../../dao.php";
         exit;
     }
 
-    $db = ConnectDB();
+    try {
+        UpdatePlat($libelle, $picture, $active, $id, $prix, $desc, $idcat);
+       }
 
-    if ($image == Null) {
-        try {
-            $requete = $db->prepare("UPDATE plat SET libelle = :libelle, active = :active, prix = :prix, 
-            description = :desc, id_categorie = :idcat WHERE id = :id;"); 
-            $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
-            $requete->bindValue(":active", $active, PDO::PARAM_STR);
-            $requete->bindValue(":prix", $prix, PDO::PARAM_STR);
-            $requete->bindValue(":desc", $desc, PDO::PARAM_STR);
-            $requete->bindValue(":idcat", $idcat, PDO::PARAM_INT);
-            $requete->bindValue(":id", $id, PDO::PARAM_INT);
-    
-               $requete->execute();
-               $requete->closeCursor();
-           }
-
-           catch (Exception $e) {
-            echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
-            die("Fin du script (script_plat_modify)");
-        }
-       
-    }
-
-    else {
-        try {
-            $requete = $db->prepare("UPDATE plat SET libelle = :libelle, active = :active, image = :image, prix = :prix, 
-            description = :desc, id_categorie = :idcat WHERE id = :id;"); 
-            $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
-            $requete->bindValue(":active", $active, PDO::PARAM_STR);
-            $requete->bindValue(":image", $image, PDO::PARAM_STR);
-            $requete->bindValue(":prix", $prix, PDO::PARAM_STR);
-            $requete->bindValue(":desc", $desc, PDO::PARAM_STR);
-            $requete->bindValue(":idcat", $idcat, PDO::PARAM_INT);
-            $requete->bindValue(":id", $id, PDO::PARAM_INT);
-    
-               $requete->execute();
-               $requete->closeCursor();
-           }
-
-           catch (Exception $e) {
-            echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
-            die("Fin du script (script_plat_modify)");
-        }
-       
+    catch (Exception $e) {
+     die("Fin du script (script_plat_modify)");
     }
 
     // Si OK: redirection vers la page artist_detail.php

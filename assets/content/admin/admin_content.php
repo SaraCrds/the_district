@@ -6,8 +6,11 @@ $DisCat = AdminCat();
 
 <div class="bg-plat-page">
 <div class="col-12 text-white">
-<h2 class="text-white text-center">Panneau Administrateur</h2>
-<p class="col-md-6 col-11 mx-auto mt-3 text-center">
+<h2 class="text-white text-center mb-0">Panneau Administrateur</h2>
+<p class="col-md-6 col-11 mx-auto text-center">
+    <a class="text-white" href="commande_modify.php">Cliquez ici pour modifier les commandes</a>
+</p>
+<p class="col-md-6 col-11 mx-auto mt-1 text-center">
     <a class="text-white" href="index.php">Cliquez ici pour retourner à l'index</a>
 </p>
 <div class="row no-gutters col-11 mx-auto shadow-none">

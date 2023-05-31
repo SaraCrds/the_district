@@ -24,13 +24,13 @@
     <div class="col-6 col-md-3 mb-3 text-center">
       <h5 class="text-white">Informations légales</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Mentions légales</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Politique de confidentialité</a></li>
+        <li class="nav-item mb-2"><a href="mentions.php" class="nav-link p-0">Mentions légales</a></li>
+        <li class="nav-item mb-2"><a href="politique.php" class="nav-link p-0">Politique de confidentialité</a></li>
       </ul>
     </div>
 
     <div class="border-top pt-4 text-center">
-      <p>© 2022 Company, Inc. All rights reserved.</p>
+      <p>© 2023 Company, Inc. All rights reserved.</p>
       <?php if (isset($_SESSION['login'])){ ?>
       <p><a href="admin.php">Panneau administrateur</a></p>
       <?php }?>

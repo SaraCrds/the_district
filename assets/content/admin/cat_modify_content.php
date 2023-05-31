@@ -14,7 +14,7 @@ $active = AdminActive();
     <div class="col-md-6 bg-black p-0 d-flex justify-content-center">
             <img src="assets/img/category/<?= $DisCatSpe->image ?>" class="w-50">
         </div>
-        <div class="col-md-6 p-0 bg-black py-3 px-4">
+        <div class="col-md-6">
             <form class="px-5 pt-4 h-50 text-white pb-5" action ="assets/content/script/script_modify_category.php" method="post" enctype="multipart/form-data">
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
@@ -25,7 +25,7 @@ $active = AdminActive();
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="mb-3">
-                        <label for="artist" class="form-label">Active:</label>
+                        <label for="active" class="form-label">Active:</label>
                         <select class="form-select" name="active" id="active">
                           <?php foreach ($active as $active): 
                             if ($DisCatSpe->active == $active->active){?>

@@ -7,7 +7,7 @@ require "../../../dao.php";
     $active = (isset($_POST['active']) && $_POST['active'] != "") ? $_POST['active'] : Null;
 
     // recuperation image
-    $uploads_dir = '../../../the_district/assets/img/category';
+    $uploads_dir = '../../../assets/img/category';
     if ($_FILES["picture"]["error"] != 0) { 
         $picture = Null;
      } 
@@ -30,43 +30,12 @@ require "../../../dao.php";
         exit;
     }
 
-    $db = ConnectDB();
+    try {
+        UpdateCat($libelle, $picture, $active, $id);
+       }
 
-    if ($picture == Null) {
-        try {
-            $requete = $db->prepare("UPDATE categorie SET libelle = :libelle, active = :active WHERE id = :id;"); 
-            $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
-            $requete->bindValue(":active", $active, PDO::PARAM_STR);
-            $requete->bindValue(":id", $id, PDO::PARAM_INT);
-    
-               $requete->execute();
-               $requete->closeCursor();
-           }
-
-           catch (Exception $e) {
-            echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
-            die("Fin du script (script_category_modify)");
-        }
-       
-    }
-
-    else {
-        try {
-            $requete = $db->prepare("UPDATE categorie SET libelle = :libelle, image = :picture, active = :active WHERE id = :id;"); 
-            $requete->bindValue(":libelle", $libelle, PDO::PARAM_STR);
-            $requete->bindValue(":image", $picture, PDO::PARAM_STR);
-            $requete->bindValue(":active", $active, PDO::PARAM_STR);
-            $requete->bindValue(":id", $id, PDO::PARAM_INT);
-    
-               $requete->execute();
-               $requete->closeCursor();
-           }
-
-           catch (Exception $e) {
-            echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
-            die("Fin du script (script_category_modify)");
-        }
-       
+       catch (Exception $e) {
+        die("Fin du script");
     }
 
     // Si OK: redirection vers la page artist_detail.php

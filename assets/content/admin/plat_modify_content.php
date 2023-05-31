@@ -11,10 +11,10 @@ $categorie = AdminCatSel();
     <a href="javascript:history.back()" class="text-white mb-2"> <i class="fa-solid fa-arrow-left pe-2"></i> Go Back</a>
     </div>
     <div class="row no-gutters bg-black col-11 mx-auto mb-5 py-3">
-    <div class="col-md-6 bg-black p-0 d-flex justify-content-center">
-            <img src="assets/img/food/<?= $DisPlatSpe->image ?>" class="w-50">
+    <div class="col-md-5 bg-black p-2 text-center">
+            <img src="assets/img/food/<?= $DisPlatSpe->image ?>" class="w-100 object-fit-contain">
         </div>
-        <div class="col-md-6 p-0 bg-black py-3 px-4">
+        <div class="col-md-7 p-0 bg-black py-3 px-4">
             <form class="px-5 pt-4 h-50 text-white pb-5" action ="assets/content/script/script_modify_plat.php" method="post" enctype="multipart/form-data">
                 <div class="row no-gutters align-items-center">
                     <div class="col-md-6 col-12">
@@ -49,7 +49,7 @@ $categorie = AdminCatSel();
                         <label for="artist" class="form-label">Categorie:</label>
                         <select class="form-select" name="categorie" id="categorie">
                           <?php foreach ($categorie as $categorie): 
-                            if ($DisPlatSpe->categorie_id == $categorie->id){?>
+                            if ($DisPlatSpe->id_categorie == $categorie->id){?>
                             <option selected value="<?= $categorie->id ?>"><?= $categorie->libelle ?></option>
                             <?php } else {?>
                             <option value="<?= $categorie->id ?>"><?= $categorie->libelle ?></option>

@@ -2,6 +2,14 @@
 
 if (session_status() == PHP_SESSION_NONE) {session_start();}
 
+if (isset($_SESSION['login'])){ 
+  $id = $_SESSION['login'];
+  }
+
+  else {
+  $id = Null;
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +31,10 @@ if (session_status() == PHP_SESSION_NONE) {session_start();}
 <body class="body-bg bg-black m-0 p-0">
 <header>
     <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar fixed-top bg-black px-5" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg navbar sticky-top bg-black px-2" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Logo District</a>
+    <a class="navbar-brand" href="index.php">
+      <img src="assets/img/the_district_brand/logo_transparent.png" width="150"></a>
     <button class="navbar-toggler border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <span class="material-symbols-outlined">
@@ -52,9 +61,26 @@ if (session_status() == PHP_SESSION_NONE) {session_start();}
         <li class="nav-item text-primary align-content-center py-2">
         ✦
         </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="login.php"><i class="fa-regular fa-user"></i></a>
-        </li>
+          <?php
+          if (isset($_SESSION['login'])){ 
+          echo "
+          <li class='nav-item'>
+            <a class='nav-link' aria-current='page' href='profil.php?id=" . $id ."'><i class='fa-regular fa-user'></i> Profil</a>
+          </li>
+          <li class='nav-item text-primary align-content-center py-2'>
+          ✦
+          </li>
+          <li class='nav-item'>
+          <a class='nav-link' aria-current='page' href='assets/content/script/script_deco.php'>Déconnexion</a>
+          </li>";
+          }
+
+          else {
+          echo "<li class='nav-item'>
+          <a class='nav-link' aria-current='page' href='login.php'> Connexion</a>
+          </li>";
+          }
+          ?>
       </ul>
     </div>
   </div>

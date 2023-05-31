@@ -1,9 +1,9 @@
 <?php 
 if (session_status() == PHP_SESSION_NONE) {session_start();}
 require "dao.php";
-if (($_SESSION['login'])==2){ 
+if (isset($_SESSION['login'])){ 
     require "header.php";
-    require "assets/content/admin/admin_content.php";
+    require "assets/content/viewer/profile_content.php";
     require "footer.php";
 }
 
